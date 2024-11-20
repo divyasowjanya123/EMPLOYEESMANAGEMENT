@@ -1,0 +1,12 @@
+<struts-config>
+    <form-beans>
+        <form-bean name="employeeForm" type="com.example.EmployeeForm"/>
+    </form-beans>
+
+    <action-mappings>
+        <action path="/addEmployee" type="com.example.AddEmployeeAction" name="employeeForm" scope="request" validate="true" input="/addEmployee.jsp">
+            <forward name="success" path="/success.jsp"/>
+            <forward name="failure" path="/error.jsp"/>
+        </action>
+    </action-mappings>
+</struts-config>
